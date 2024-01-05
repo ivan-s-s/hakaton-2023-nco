@@ -1,3 +1,4 @@
+import { GameTitle } from 'components';
 import classes from './Settings.module.css';
 
 export const Settings = (props) => {
@@ -6,6 +7,7 @@ export const Settings = (props) => {
     <div className={classes.settings}>
       Настройки (выбери уровень)
       <button onClick={onClickStartGame}>Начать игру</button>
+      <GameTitle />
     </div>
   );
 };
