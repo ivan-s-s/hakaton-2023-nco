@@ -15,8 +15,10 @@
   background-color: #46467A;
 }
 
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1920px) {
   .button {
     font-size: 29px;
+    width: 262px;
+    height: 55px;
   }
 }
