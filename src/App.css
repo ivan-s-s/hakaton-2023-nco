@@ -1,5 +1,59 @@
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root,
+#root > div {
+  height: 100%;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: node;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+
 }
 
 .App-header {
