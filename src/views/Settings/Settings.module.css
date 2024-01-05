@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   background-image: url('../../assets/images/background-gradient.png');
   background-repeat: repeat-x;
   z-index: 0;
@@ -29,7 +29,7 @@
   align-items: center;
   align-self: start;
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   z-index: 1;
 }
 
@@ -98,8 +98,12 @@
   gap: 45px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1140px) {
   .title {
-    font-size: 86px;
+    font-size: 76px;
+  }
+
+  .buttonsPanel {
+    gap: 38px;
   }
 }
