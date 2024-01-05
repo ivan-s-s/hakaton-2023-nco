@@ -21,7 +21,7 @@ export const Settings = (props) => {
               className={`${classes.starTwo}`}
             />
           </div>
-          <GameTitle />
+          <GameTitle style={{fontSize: "100%"}}/>
           <div className={classes.stars}>
             <img
               src={star}

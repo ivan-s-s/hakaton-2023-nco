@@ -1,10 +1,10 @@
 import { star } from 'assets/images';
 import classes from './GameTitle.module.css';
 
-export const GameTitle = ({children, litleStar, bigStar, style}) => {
+export const GameTitle = ({children, litleStar, bigStar, style, ...rest}) => {
   return (
     <div>
-      <h1 className={classes.title} style={style}>
+      <h1 className={classes.title} style={style} {...rest}>
         {litleStar && (
           <img
             src={star}
