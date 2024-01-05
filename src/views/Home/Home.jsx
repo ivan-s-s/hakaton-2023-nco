@@ -11,7 +11,7 @@ export const Home = (props) => {
       <img src={startImg} className={classes.startImg} alt="start" />
       <div className={classes.startContainer}>
         <div className={classes.startBox}>
-          <GameTitle />
+          <GameTitle litleStar bigStar/>
           <div className={classes.start}>Начать игру</div>
         </div>
         <button className={classes.playBtn} onClick={onClickPlay}>
