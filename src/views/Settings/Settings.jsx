@@ -36,11 +36,13 @@ export const Settings = (props) => {
           </div>
         </div>
         <legend className={classes.legend}>Выбери уровень</legend>
-        <LevelButton onClick={onClickStartGame} style={{marginBottom: "58px"}}>Легкий</LevelButton>
-        <LevelButton onClick={onClickStartGame} style={{marginBottom: "58px"}}>Средний</LevelButton>
-        <LevelButton onClick={onClickStartGame} style={{marginBottom: "58px"}}>Тяжелый</LevelButton>
-        <LevelButton onClick={onClickStartGame}>Мультиплеер</LevelButton>
-        <LevelButton onClick={onClickStartGame} style={{backgroundColor: "#FFC212", fontSize: "24px", width: "324px", height: "57px", borderRadius: "28px", alignSelf: "flex-end", marginRight: "48px"}}>лидеры игры</LevelButton>
+        <div className={classes.buttonsPanel}>
+          <LevelButton onClick={onClickStartGame}>Легкий</LevelButton>
+          <LevelButton onClick={onClickStartGame}>Средний</LevelButton>
+          <LevelButton onClick={onClickStartGame}>Тяжелый</LevelButton>
+          <LevelButton onClick={onClickStartGame}>Мультиплеер</LevelButton>
+          <LevelButton onClick={onClickStartGame} style={{backgroundColor: "#FFC212", fontSize: "24px", width: "324px", height: "57px", borderRadius: "28px", alignSelf: "flex-end", marginRight: "48px"}}>лидеры игры</LevelButton>
+        </div>
       </div>
     </div>
   );
