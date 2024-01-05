@@ -24,7 +24,7 @@ export const Board = (props) => {
   };
 
   const chooseCard = (card) => {
-    !pickOne ? setPickOne(card) : setPickTwo(card);
+      !pickOne ? setPickOne(card) : setPickTwo(card);
   };
 
   const reset = () => {

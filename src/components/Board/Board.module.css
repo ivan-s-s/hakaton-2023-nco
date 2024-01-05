@@ -1,6 +1,6 @@
 .card {
   width: 100px;
-  height: 100px;
+  height: 106px;
   background-color: #46467a;
   border-radius: 10px;
 }
@@ -21,6 +21,7 @@ img.card {
   border: solid 4px #f9b0c3;
   padding: 20px;
   box-sizing: border-box;
+  /* box-shadow: 3px 4px 16px 0px rgba(0, 0, 0, 0.4); */
 }
 
 .back {
