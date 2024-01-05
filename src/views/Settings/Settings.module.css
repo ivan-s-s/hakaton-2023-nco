@@ -36,3 +36,12 @@
     height: 100%;
     z-index: 1;
 }
+
+.legend {
+    color: #fff;
+    font-size: 36px;
+    background-color: #f9b0c3;
+    padding: 22px 75px;
+    border-radius: 200px;
+    border: 2px solid #2f2f61;
+  }

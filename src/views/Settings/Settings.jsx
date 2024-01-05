@@ -8,6 +8,7 @@ export const Settings = (props) => {
       <div className={classes.gradient}></div>
       <div className={classes.container}>
         <GameTitle />
+        <legend className={classes.legend}>Выбери уровень</legend>
         <LevelButton onClick={onClickStartGame}>Легкий</LevelButton>
         <LevelButton onClick={onClickStartGame}>Средний</LevelButton>
         <LevelButton onClick={onClickStartGame}>Тяжелый</LevelButton>
