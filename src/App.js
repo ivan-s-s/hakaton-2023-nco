@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { Home, Game, Results, Pause } from './views';
 import { VIEWS } from './utils/constants';
@@ -23,6 +23,10 @@ function App() {
     setGameScore({ moves: 0, points: 0 });
     goToNextPage(VIEWS.Home);
   };
+
+  useEffect(() => {
+    document.title = `Find a match (${location})`
+  }, [location]);
 
   return (
     <div className="App">
