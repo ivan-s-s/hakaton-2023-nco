@@ -1,4 +1,5 @@
 import { GameTitle, LevelButton } from 'components';
+import { star } from 'assets/images';
 import classes from './Settings.module.css';
 
 export const Settings = (props) => {
@@ -7,10 +8,32 @@ export const Settings = (props) => {
     <div className={classes.settings}>
       <div className={classes.gradient}></div>
       <div className={classes.container}>
-        <div>
-
+        <div className={classes.title}>
+          <div className={classes.stars}>
+            <img
+              src={star}
+              alt=""
+              className={`${classes.starOne}`}
+            />
+            <img
+              src={star}
+              alt=""
+              className={`${classes.starTwo}`}
+            />
+          </div>
           <GameTitle />
-          
+          <div className={classes.stars}>
+            <img
+              src={star}
+              alt=""
+              className={`${classes.starThree}`}
+            />
+            <img
+              src={star}
+              alt=""
+              className={`${classes.starFour}`}
+            />
+          </div>
         </div>
         <legend className={classes.legend}>Выбери уровень</legend>
         <LevelButton onClick={onClickStartGame} style={{marginBottom: "58px"}}>Легкий</LevelButton>
