@@ -25,7 +25,7 @@ function App() {
   };
 
   useEffect(() => {
-    document.title = `Find a match (${location})`
+    document.title = `Игра Найди пару - Find a match (${location})`
   }, [location]);
 
   return (
