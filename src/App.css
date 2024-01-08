@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1.4vmin);
   color: white;
   background-repeat: no-repeat;
   background-position: center; 
