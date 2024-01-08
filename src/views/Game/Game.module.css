@@ -27,11 +27,31 @@
 }
 
 .gridLayout {
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-column-gap: 52px;
+  grid-row-gap: 0px; */
+}
+
+.gridBoardLayout {
+  position: relative;
   display: grid;
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 52px;
   grid-row-gap: 0px;
+}
+
+.roof {
+  position: absolute;
+  /* background-color: red; */
+  top: -180px;
+  left: 0;
+  border: 250px solid transparent;
+  border-top: none;
+  border-bottom: 180px solid green;
+  z-index: 2;
 }
 
 .div1 {

@@ -76,7 +76,8 @@ export const Board = (props) => {
         <div className={classes.moveCounter}>Ход: {move}</div>
         <div className={classes.move}>Счёт: {moveToFinish} / 8</div>
       </div>
-      <div className={classes.boardGrid}>
+      <div className={classes.boardGrid} id="boardGrid">
+        
         {cards.map((card) => (
           <SingleCard
             key={card.id}

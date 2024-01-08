@@ -46,7 +46,7 @@ img.card {
   grid-gap: 20px;
   background-color: #46467a;
   padding: 20px;
-  position: relative;
+  /* position: relative; */
 }
 
 .moveCounter {
