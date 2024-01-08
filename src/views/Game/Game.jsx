@@ -40,15 +40,21 @@ export const Game = (props) => {
 
   return (
     <main className="App-header"> {/* z-index = 0 */}
-      <header>
-        <div>
-          {modalIsOpen && (
-            <Confirm onRestartGame={onRestartGame} onClickPlay={closeModal} /> /* z-index = 100 */
-          )}
-        </div>
-        <GameTitle style={{fontSize: "42px"}}/> {/* z-index = 2 */}
-      </header>
+
+      <div>
+        {modalIsOpen && (
+          <Confirm onRestartGame={onRestartGame} onClickPlay={closeModal} /> /* z-index = 100 */
+        )}
+      </div>
+
+      
+      
       <div className={classes.gridLayout}> {/* z-index = 2 */}
+        <div className={classes.emptyDiv1}></div>
+        <div className={classes.roofTitle}>
+          <GameTitle style={{fontSize: "42px"}}/> {/* z-index = 2 */}
+        </div>
+        <div className={classes.emptyDiv2}></div>
         <div className={classes.stats}>
           <div className={classes.moveCounter}>Ход: {move}</div>
           <div className={classes.move}>Счёт: {moveToFinish} / 8</div>
@@ -64,3 +70,8 @@ export const Game = (props) => {
     </main>
   );
 };
+
+
+//<div className={classes.title}>
+//        <GameTitle style={{fontSize: "42px"}}/> {/* z-index = 2 */}
+//      </div>

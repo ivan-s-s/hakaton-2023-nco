@@ -5,6 +5,7 @@ import SingleCard from './SingleCard';
 
 import { VIEWS } from 'utils/constants.js';
 import { AppContext } from 'utils/context';
+import { GameTitle } from 'components';
 
 export const Board = ({ moveChange, moveToFinish, ...props }) => {
   const { location } = useContext(AppContext);
@@ -60,8 +61,7 @@ export const Board = ({ moveChange, moveToFinish, ...props }) => {
   }, [location]);
 
   return (
-    <>
-      <div className={classes.roof} style={{width: "500px", height: "180px", left: "25%"}}></div>
+    <div className={classes.board}>
       <div className={classes.flexBlock}>
         <div className={classes.boardGrid} id="boardGrid">
           {cards.map((card) => (
@@ -74,6 +74,6 @@ export const Board = ({ moveChange, moveToFinish, ...props }) => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
