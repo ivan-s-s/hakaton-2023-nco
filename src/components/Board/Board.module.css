@@ -8,6 +8,7 @@
 .flexBlock {
   display: flex;
   gap: 50px;
+  z-index: 2;
 }
 
 .stats {
@@ -70,6 +71,17 @@ img.card {
   justify-content: center;
   align-items: center;
   font-family: Comfortaa;
+}
+
+.roof {
+  position: absolute;
+  /* background-color: red; */
+  top: -180px;
+  left: 0;
+  border: 250px solid transparent;
+  border-top: none;
+  border-bottom: 130px solid #46467a;
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {

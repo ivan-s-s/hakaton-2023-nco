@@ -1,9 +1,26 @@
+import { useContext, useEffect, useState } from 'react';
 import { Board, Confirm, GameTitle } from 'components';
+
+import { VIEWS } from 'utils/constants.js';
+import { AppContext } from 'utils/context';
+
 import classes from './Game.module.css';
-import { useEffect, useState } from 'react';
 
 export const Game = (props) => {
   const { onRestartGame, onPauseGame } = props;
+  
+  const {setLocation, setGameScore } = useContext(AppContext);
+
+  const [move, setMove] = useState(0);
+  const [moveToFinish, setMoveToFinish] = useState(0);
+
+  const moveChangeToUp = () => {
+    setMove(move + 1);
+  };
+
+  const changeMoveToFinish = () => {
+    setMoveToFinish(moveToFinish + 1);
+  };
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const openModal = () => setModalIsOpen(true);
@@ -13,52 +30,35 @@ export const Game = (props) => {
     const left = document.querySelector("#boardGrid").getBoundingClientRect().x - document.querySelector(".gridBoardLayout").getBoundingClientRect().x;
   };
 
-  // const roof = () => {
-  //   const roofWidth = document.querySelector("#boardGrid").getBoundingClientRect().width;
-  //   const roofHeight = roofWidth / 2;
-
-  //   return [
-  //     {width: `${roofWidth}px`,
-  //     height: `${roofHeight}px`
-  //   }]
-  // };
-  // console.log(roof())
-  // // useEffect(() => {
-  // //   document.querySelector("#roof").style.width = `${document.querySelector("#boardGrid").clientWidth}`;
-  // //   document.querySelector("#roof").style.heught = `${document.querySelector("#boardGrid").clientWidth / 2}`;
-
-  // //   document.querySelector("#roof").style.top = `${document.querySelector("#boardGrid").getBoundingClientRect().x}`;
-  // // }, []);
-
-  // // document.querySelector("#roof").setAttribute('style', `${document.querySelector("#boardGrid").clientWidth}`);
-  // //   // document.querySelector("#roof").style.heught = `${document.querySelector("#boardGrid").clientWidth / 2}`;
-
-  // // // document.querySelector("#roof").style.top = document.querySelector("#boardGrid").getBoundingClientRect().x;
-
-  // // // document.querySelector("#boardGrid").getBoundingClientRect().x
+  useEffect(() => {
+    if (moveToFinish === 8) {
+      console.log('Finish');
+      setGameScore({ moves: move });
+      setLocation(VIEWS.Results);
+    }
+  }, [moveToFinish, setLocation, move, setGameScore]);
 
   return (
-    <main className="App-header">
-      
+    <main className="App-header"> {/* z-index = 0 */}
       <header>
         <div>
           {modalIsOpen && (
-            <Confirm onRestartGame={onRestartGame} onClickPlay={closeModal} />
+            <Confirm onRestartGame={onRestartGame} onClickPlay={closeModal} /> /* z-index = 100 */
           )}
         </div>
-        <GameTitle />
+        <GameTitle style={{fontSize: "42px"}}/> {/* z-index = 2 */}
       </header>
-      <div className={classes.gridLayout}>
-        <div className={classes.gridBoardLayout}>
-          <div>
-            <div className={classes.roof} style={{width: "500px", height: "180px", left: "25%"}}></div>
-          <Board className={classes.div1} />
-          </div>
-          
-          <div className={classes.div2}>
-            <button className={classes.pause} onClick={onPauseGame}></button>
-            <button className={classes.restart} onClick={openModal}></button>
-          </div>
+      <div className={classes.gridLayout}> {/* z-index = 2 */}
+        <div className={classes.stats}>
+          <div className={classes.moveCounter}>Ход: {move}</div>
+          <div className={classes.move}>Счёт: {moveToFinish} / 8</div>
+        </div>
+        <div className={classes.div1} >
+          <Board moveChange={moveChangeToUp} moveToFinish={changeMoveToFinish}/>
+        </div>
+        <div className={classes.div2}>
+          <button className={classes.pause} onClick={onPauseGame}></button>
+          <button className={classes.restart} onClick={openModal}></button>
         </div>
       </div>
     </main>
