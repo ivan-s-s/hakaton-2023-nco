@@ -28,9 +28,10 @@ export const Game = (props) => {
 
   useEffect(() => {
     if (moveToFinish === +level) {
-      console.log('Finish');
-      setGameScore({ moves: move });
-      setLocation(VIEWS.Results);
+      setTimeout(() => {
+        setGameScore({ moves: move });
+        setLocation(VIEWS.Results);
+      }, 1500);
     }
   }, [moveToFinish, setLocation, move, setGameScore, level]);
 
