@@ -12,30 +12,24 @@ function SingleCard({ card, chooseCard, isOpen, level }) {
   };
 
   return (
-    <div className='card'>
-      <div className={clsx(classes.card, {
-        [classes.card__middle]: +level === 12,
-        [classes.card__hard]: +level === 18,
-        [classes.open]: isOpen,
-        [classes.none]: !isOpen,
-      })}>
-      <img
-        className={clsx(classes.imgCard)}
-        src={card.src}
-        alt={card.alt}
-      />
+    <div className={clsx(classes.flipCard, {
+      [classes.cardIsOpen]: isOpen,
+    })}>
+      <div className={clsx(classes.cardContent)}>
+        <div className={clsx(classes.back, classes.visibility, {
+            [classes.back__middle]: +level === 12,
+            [classes.back__hard]: +level === 18,
+          })}
+          style={{backgroundImage: `url(${backImg})`, backgroundSize: "cover"}}
+          onClick={clickOnCard}
+        ></div>
+        <div className={clsx(classes.card, classes.visibility, {
+            [classes.card__middle]: +level === 12,
+            [classes.card__hard]: +level === 18,
+          })}
+          style={{backgroundImage: `url(${card.src})`, backgroundSize: "66%", backgroundRepeat: "no-repeat", backgroundPosition: "center"}}
+        ></div>
       </div>
-      <img
-        className={clsx({
-          [classes.none]: isOpen,
-          [classes.back]: !isOpen,
-          [classes.back__middle]: +level === 12,
-          [classes.back__hard]: +level === 18,
-        })}
-        src={backImg}
-        onClick={clickOnCard}
-        alt="cards back"
-      />
     </div>
   );
 }

@@ -3,29 +3,45 @@
   flex-direction: column;
 }
 
+.cardContent {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.cardIsOpen .cardContent {
+  transform: rotateY(.5turn);
+}
+
+.visibility {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
 .card {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100px;
   height: 100px;
-  background-color: #46467a;
   border-radius: 10px;
-  padding: 20px;
   margin: 0;
   border: none;
+  background-color: #e0dffe;
+  border: solid 4px #f9b0c3;
+  box-shadow: 3px 4px 16px 0px rgba(0, 0, 0, 0.4);
+
+  transform: rotateY(-180deg);
 }
 
 .card__middle {
   width: 80px;
   height: 80px;
-  padding: 12px;
 }
 
 .card__hard {
   width: 80px;
   height: 80px;
-  padding: 12px;
 }
 
 .flexBlock {
@@ -46,12 +62,19 @@ img.imgCard {
 }
 
 .back {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100px;
   height: 100px;
+  cursor: pointer;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 3px 4px 16px 0px rgba(0, 0, 0, 0.4),
     6px 7px 32px 0px rgba(119, 102, 198, 0.79) inset;
+  /* position: relative; */
+
+  transform: rotateY(0deg);
 }
 
 .back__middle {
@@ -62,18 +85,6 @@ img.imgCard {
 .back__hard {
   width: 80px;
   height: 80px;
-}
-
-.open {
-  display: block;
-  background-color: #e0dffe;
-  border: solid 4px #f9b0c3;
-
-  box-shadow: 3px 4px 16px 0px rgba(0, 0, 0, 0.4);
-}
-
-.none {
-  display: none;
 }
 
 .boardGrid {
@@ -121,8 +132,6 @@ img.imgCard {
   align-items: center;
   font-family: Comfortaa;
 }
-
-
 
 @media screen and (max-width: 767px) {
   .flexBlock {

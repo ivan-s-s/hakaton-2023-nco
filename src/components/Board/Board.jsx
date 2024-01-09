@@ -63,7 +63,7 @@ export const Board = ({ moveChange, moveToFinish, level }) => {
       reset(); // useCallback ???
       moveToFinish();
     } else {
-      setTimeout(() => reset(), 500);
+      setTimeout(() => reset(), 1000);
     }
   }, [pickOne, pickTwo]);
 
