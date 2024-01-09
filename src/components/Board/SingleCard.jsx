@@ -19,8 +19,6 @@ function SingleCard({ card, chooseCard, isOpen, level }) {
         [classes.open]: isOpen,
         [classes.none]: !isOpen,
       })}>
-
-      
       <img
         className={clsx(classes.imgCard)}
         src={card.src}

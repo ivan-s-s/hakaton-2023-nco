@@ -88,11 +88,15 @@ img.imgCard {
 .boardGrid__middle {
   grid-template-columns: repeat(5, 80px);
   grid-template-rows: repeat(5, 80px);
+  grid-gap: 14px;
+  padding: 14px;
 }
 
 .boardGrid__hard {
   grid-template-columns: repeat(6, 80px);
   grid-template-rows: repeat(6, 80px);
+  grid-gap: 14px;
+  padding: 14px;
 }
 
 .moveCounter {
