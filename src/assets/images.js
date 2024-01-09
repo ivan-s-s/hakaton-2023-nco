@@ -74,7 +74,7 @@ const IMAGES_MIDDLE = [...IMAGES_EASY,
   },
 ];
 
-const IMAGES_HARD = [...IMAGES_EASY, ...IMAGES_MIDDLE,
+const IMAGES_HARD = [...IMAGES_MIDDLE,
   {
     src: houseHeartImg,
     alt: 'house',
