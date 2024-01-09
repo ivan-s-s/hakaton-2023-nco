@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import classes from './Board.module.css';
 import { IMAGES_EASY, IMAGES_MIDDLE, IMAGES_HARD } from 'assets/images.js';
 import SingleCard from './SingleCard';
+import clsx from 'clsx';
 
 import { VIEWS } from 'utils/constants.js';
 import { AppContext } from 'utils/context';
@@ -75,13 +76,17 @@ export const Board = ({ moveChange, moveToFinish, level }) => {
   return (
     <div className={classes.board}>
       <div className={classes.flexBlock}>
-        <div className={classes.boardGrid} id="boardGrid">
+        <div className={clsx(classes.boardGrid, {
+          [classes.boardGrid__middle]: +level === 12,
+          [classes.boardGrid__hard]: +level === 18,
+        })} id="boardGrid">
           {cards.map((card) => (
             <SingleCard
               key={card.id}
               card={card}
               chooseCard={chooseCard}
               isOpen={card === pickOne || card === pickTwo || card.status}
+              level={level}
             />
           ))}
         </div>
