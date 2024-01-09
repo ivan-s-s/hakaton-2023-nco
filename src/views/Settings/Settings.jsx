@@ -4,6 +4,7 @@ import classes from './Settings.module.css';
 
 export const Settings = (props) => {
   const { onClickStartGame } = props;
+
   return (
     <div className={classes.settings}>
       <div className={classes.gradient}></div>
@@ -37,9 +38,9 @@ export const Settings = (props) => {
         </div>
         <legend className={classes.legend}>Выбери уровень</legend>
         <div className={classes.buttonsPanel}>
-          <LevelButton onClick={onClickStartGame}>Легкий</LevelButton>
-          <LevelButton onClick={onClickStartGame}>Средний</LevelButton>
-          <LevelButton onClick={onClickStartGame}>Тяжелый</LevelButton>
+          <LevelButton onClick={onClickStartGame} id="8">Легкий</LevelButton>
+          <LevelButton onClick={onClickStartGame} id="12">Средний</LevelButton>
+          <LevelButton onClick={onClickStartGame} id="18">Тяжелый</LevelButton>
           <LevelButton onClick={onClickStartGame}>Мультиплеер</LevelButton>
           <LevelButton onClick={onClickStartGame} style={{backgroundColor: "#FFC212", fontSize: "24px", width: "310px", height: "54px", borderRadius: "200px", alignSelf: "flex-end", marginRight: "48px"}}>лидеры игры</LevelButton>
         </div>

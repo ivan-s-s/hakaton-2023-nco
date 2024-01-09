@@ -5,9 +5,11 @@
 
 .card {
   width: 100px;
-  height: 106px;
+  height: 100px;
   background-color: #46467a;
   border-radius: 10px;
+  margin: 0;
+  border: none;
 }
 
 .flexBlock {
@@ -23,11 +25,12 @@
 }
 
 img.card {
+
   background-color: #e0dffe;
   border: solid 4px #f9b0c3;
   padding: 20px;
-  box-sizing: border-box;
-  /* box-shadow: 3px 4px 16px 0px rgba(0, 0, 0, 0.4); */
+
+  box-shadow: 3px 4px 16px 0px rgba(0, 0, 0, 0.4);
 }
 
 .back {
@@ -50,10 +53,10 @@ img.card {
 .boardGrid {
   display: grid;
   grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
   grid-gap: 20px;
   background-color: #46467a;
   padding: 20px;
-  /* position: relative; */
 }
 
 .moveCounter {

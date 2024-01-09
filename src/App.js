@@ -6,6 +6,7 @@ import { AppContext } from 'utils/context';
 
 function App() {
   const [location, setLocation] = useState(VIEWS.Home);
+  const [level, setLevel] = useState(8);
   const [gameScore, setGameScore] = useState({
     points: 0,
     moves: 0,
@@ -25,17 +26,22 @@ function App() {
     goToNextPage(VIEWS.Home);
   };
 
+  const gameLevelToPlay = (value) => {
+    setLevel(value.target.id);
+    goToNextPage(VIEWS.Game);
+  };
+
   useEffect(() => {
-    document.title = `Игра Найди пару - Find a match (${location})`
+    document.title = `Игра Найди пару - Find a match (${location})`;
   }, [location]);
 
   return (
     <div className="App">
       <AppContext.Provider
-        value={{ location, setLocation, gameScore, setGameScore }}
+        value={{ location, setLocation, gameScore, setGameScore, level, setLevel }}
       >
         {isHomeOpen && <Home onClickPlay={() => goToNextPage(VIEWS.Settings)} />}
-        {isSettingsOpen && <Settings onClickStartGame={() => goToNextPage(VIEWS.Game)} />}
+        {isSettingsOpen && <Settings onClickStartGame={gameLevelToPlay} />}
         {isGameOpen && (
           <Game
             onRestartGame={handleRestartGame}

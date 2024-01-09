@@ -1,23 +1,35 @@
 import React, { useState, useEffect, useContext } from 'react';
 import classes from './Board.module.css';
-import { IMAGES } from 'assets/images.js';
+import { IMAGES_EASY, IMAGES_MIDDLE, IMAGES_HARD } from 'assets/images.js';
 import SingleCard from './SingleCard';
 
 import { VIEWS } from 'utils/constants.js';
 import { AppContext } from 'utils/context';
-import { GameTitle } from 'components';
 
-export const Board = ({ moveChange, moveToFinish, ...props }) => {
+export const Board = ({ moveChange, moveToFinish, level }) => {
   const { location } = useContext(AppContext);
   const [cards, setCards] = useState([]);
 
   const [pickOne, setPickOne] = useState(null);
   const [pickTwo, setPickTwo] = useState(null);
 
-  const mixImages = () => {
-    const images = [...IMAGES, ...IMAGES]
+  const mixImages = (amoutOfCards) => {
+    let images;
+    if (+amoutOfCards === 8) {
+      images = [...IMAGES_EASY, ...IMAGES_EASY]
       .sort(() => Math.random() - 0.5)
       .map((img, index) => ({ ...img, id: index, status: false }));
+    }
+    if (+amoutOfCards === 12) {
+      images = [...IMAGES_MIDDLE, ...IMAGES_MIDDLE]
+      .sort(() => Math.random() - 0.5)
+      .map((img, index) => ({ ...img, id: index, status: false }));
+    }
+    if (+amoutOfCards === 18) {
+      images = [...IMAGES_HARD, ...IMAGES_HARD]
+      .sort(() => Math.random() - 0.5)
+      .map((img, index) => ({ ...img, id: index, status: false }));
+    }
     setCards(images);
   };
 
@@ -56,9 +68,9 @@ export const Board = ({ moveChange, moveToFinish, ...props }) => {
 
   useEffect(() => {
     if (location === VIEWS.Game) {
-      mixImages();
+      mixImages(level);
     }
-  }, [location]);
+  }, [location, level]);
 
   return (
     <div className={classes.board}>

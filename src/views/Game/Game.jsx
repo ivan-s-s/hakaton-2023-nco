@@ -9,7 +9,7 @@ import classes from './Game.module.css';
 export const Game = (props) => {
   const { onRestartGame, onPauseGame } = props;
   
-  const {setLocation, setGameScore } = useContext(AppContext);
+  const { setLocation, setGameScore, level } = useContext(AppContext);
 
   const [move, setMove] = useState(0);
   const [moveToFinish, setMoveToFinish] = useState(0);
@@ -26,17 +26,13 @@ export const Game = (props) => {
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
 
-  const roofLeft = () => {
-    const left = document.querySelector("#boardGrid").getBoundingClientRect().x - document.querySelector(".gridBoardLayout").getBoundingClientRect().x;
-  };
-
   useEffect(() => {
-    if (moveToFinish === 8) {
+    if (moveToFinish === +level) {
       console.log('Finish');
       setGameScore({ moves: move });
       setLocation(VIEWS.Results);
     }
-  }, [moveToFinish, setLocation, move, setGameScore]);
+  }, [moveToFinish, setLocation, move, setGameScore, level]);
 
   return (
     <main className="App-header"> {/* z-index = 0 */}
@@ -57,10 +53,10 @@ export const Game = (props) => {
         <div className={classes.emptyDiv2}></div>
         <div className={classes.stats}>
           <div className={classes.moveCounter}>Ход: {move}</div>
-          <div className={classes.move}>Счёт: {moveToFinish} / 8</div>
+          <div className={classes.move}>Счёт: {moveToFinish} / {level}</div>
         </div>
         <div className={classes.div1} >
-          <Board moveChange={moveChangeToUp} moveToFinish={changeMoveToFinish}/>
+          <Board moveChange={moveChangeToUp} moveToFinish={changeMoveToFinish} level={level}/>
         </div>
         <div className={classes.div2}>
           <button className={classes.pause} onClick={onPauseGame}></button>
@@ -70,8 +66,3 @@ export const Game = (props) => {
     </main>
   );
 };
-
-
-//<div className={classes.title}>
-//        <GameTitle style={{fontSize: "42px"}}/> {/* z-index = 2 */}
-//      </div>
