@@ -4,7 +4,7 @@
   position: relative;
   color: #fff;
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 96px;
+  font-size: 86px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -12,18 +12,14 @@
   z-index: 2;
 }
 
-.star {
-  position: absolute;
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 68px;
+  }
 }
 
-.smallStar {
-  top: -110px;
-  left: -130px;
-  width: 62px;
-}
-
-.bigStar {
-  top: -80px;
-  left: -80px;
-  width: 88px;
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 34px;
+  }
 }
