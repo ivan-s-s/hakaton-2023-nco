@@ -250,11 +250,11 @@
 }
 
 
-@media screen and (min-height: 896px) {
+/* @media screen and (min-height: 896px) {
     .startContainer {
         gap: 480px;
     }
-}
+} */
 
 @media screen and (max-height: 768px) {
     .startContainer {
