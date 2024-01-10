@@ -30,7 +30,7 @@
 .startImg {
     position: absolute;
     top: 0;
-    right: 8%;
+    right: 4%;
     height: 100dvh;
     object-fit: fill;
     overflow: hidden;
