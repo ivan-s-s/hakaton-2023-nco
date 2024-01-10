@@ -118,10 +118,6 @@
     background-color: #22224e;
 }
 
-/* .divButton {
-    position: relative;
-} */
-
 @media screen and (max-width: 1280px) {
     .startImg {
         right: 0;
@@ -194,22 +190,11 @@
     }
 }
 
-@media screen and (max-width: 480px) {
-    .gradient {
-        position: absolute;
-        top: auto;
-        left: auto;
-        width: 100%;
-        min-height: 100dvh;
-        background-image: url('../../assets/images/background-gradient.png');
-        background-repeat: repeat-x;
-        z-index: 0;
-    }
-
+@media screen and (max-width: 834px) {
     .startContainer {
         margin-left: 0;
         margin-top: 50px;
-        gap: 370px;
+        gap: 440px;
     }
     
     .startImg {
@@ -243,58 +228,20 @@
         width: 18px;
     }
 }
-@media screen and (max-width: 280px) {
+
+@media screen and (max-width: 480px) {
     .gradient {
-        min-height: 100lvh;
-    }
-}
-
-
-/* @media screen and (min-height: 896px) {
-    .startContainer {
-        gap: 480px;
-    }
-} */
-
-@media screen and (max-height: 768px) {
-    .startContainer {
-        margin-left: 0;
-        gap: 180px;
-    }
-
-    .playIcon {
-        width: 118px;
-        height: 118px;
-    }
-
-    .play {
-        border-top: 28px solid transparent;
-        border-bottom: 28px solid transparent;
-        border-left: 40px solid #ffc212;
-    }
-
-    .smallStar {
-        top: 6px;
-        left: -28px;
-        width: 18px;
-    }
-    
-    .bigStar {
-        top: 4px;
+        position: absolute;
+        top: auto;
         left: auto;
-        right: -28px;
-        width: 18px;
+        width: 100%;
+        min-height: 100dvh;
+        background-image: url('../../assets/images/background-gradient.png');
+        background-repeat: repeat-x;
+        z-index: 0;
     }
-}
 
-@media screen and (max-height: 740px) {
     .startContainer {
-        gap: 320px;
-    }
-}
-
-@media screen and (max-height: 600px) {
-    .startContainer {
-        gap: 180px;
+        gap: 340px;
     }
 }
