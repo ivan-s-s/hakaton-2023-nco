@@ -42,7 +42,7 @@ export const Settings = (props) => {
           <LevelButton onClick={onClickStartGame} id="12">Средний</LevelButton>
           <LevelButton onClick={onClickStartGame} id="18">Тяжелый</LevelButton>
           <LevelButton onClick={onClickStartGame}>Мультиплеер</LevelButton>
-          <LevelButton onClick={onClickStartGame} style={{backgroundColor: "#FFC212", fontSize: "24px", width: "310px", height: "54px", borderRadius: "200px", alignSelf: "flex-end", marginRight: "48px"}}>лидеры игры</LevelButton>
+          <LevelButton onClick={onClickStartGame} className={classes.lastBtn}/* style={{backgroundColor: "#FFC212", fontSize: "24px", width: "310px", height: "54px", borderRadius: "200px", alignSelf: "flex-end", marginRight: "48px", marginBottom: "20px"}} */>лидеры игры</LevelButton>
         </div>
       </div>
     </div>

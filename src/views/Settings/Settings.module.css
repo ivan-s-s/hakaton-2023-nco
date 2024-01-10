@@ -10,6 +10,7 @@
   background-color: #E0DFFE;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .gradient {
@@ -98,6 +99,20 @@
   gap: 45px;
 }
 
+.lastBtn {
+  background-color: #FFC212;
+  color: #fff;
+  font-family: Comfortaa;
+  font-size: 24px;
+  width: 280px;
+  height: 44px;
+  border: none;
+  border-radius: 200px;
+  align-self: flex-end;
+  margin-right: 48px;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 1920px) {
   .title {
     font-size: 70px;
@@ -105,5 +120,95 @@
 
   .buttonsPanel {
     gap: 38px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .buttonsPanel {
+    gap: 64px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 44px;
+  }
+
+  .legend {
+    width: 320px;
+    min-height: 48px;
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+
+  .buttonsPanel {
+    gap: 44px;
+  }
+
+  .lastBtn {
+    align-self: center;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .starOne {
+    top: 12px;
+    left: -46px;
+    height: 22px;
+  }
+
+  .starTwo {
+    top: 16px;
+    left: -30px;
+    height: 30px;
+  }
+
+  .starThree {
+    top: 18px;
+    left: 12px;
+    height: 30px;
+  }
+    
+  .starFour {
+    top: 16px;
+    left: 36px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 38px;
+  }
+
+  .legend {
+    width: 300px;
+    min-height: 44px;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  .buttonsPanel {
+    gap: 38px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .legend {
+    width: 280px;
+    min-height: 42px;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+
+  .buttonsPanel {
+    gap: 34px;
   }
 }
