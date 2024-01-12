@@ -8,6 +8,7 @@ export const Home = (props) => {
 
   return (
     <div className={classes.home}>
+      <div className={classes.gradient2}></div>
       <div className={classes.gradient}></div>
       <img src={startImg} className={classes.startImg} alt="start" />
       <div className={classes.startContainer}>

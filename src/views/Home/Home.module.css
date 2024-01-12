@@ -22,9 +22,9 @@
     left: 0;
     width: 100%;
     min-height: 100dvh;
-    background-image: url('../../assets/images/background-gradient.png');
+    background-image: url('../../assets/images/gradient-desktop.svg');
     background-repeat: repeat-x;
-    z-index: 0;
+    z-index: -1;
 }
 
 .startImg {
@@ -119,6 +119,7 @@
 }
 
 @media screen and (max-width: 1280px) {
+
     .startImg {
         right: 0;
     }
@@ -159,8 +160,13 @@
 }
 
 @media screen and (max-width: 1024px) {
+
     .home {
         justify-content: start;
+    }
+
+    .gradient {
+        background-image: url('../../assets/images/gradient-1024.svg');
     }
 
     .startImg {
@@ -191,6 +197,11 @@
 }
 
 @media screen and (max-width: 834px) {
+    .gradient {
+
+    }
+        
+
     .startContainer {
         margin-left: 0;
         margin-top: 50px;
@@ -230,15 +241,19 @@
 }
 
 @media screen and (max-width: 480px) {
-    .gradient {
+    .gradient2 {
         position: absolute;
-        top: auto;
-        left: auto;
+        top: 0;
+        left: 0;
         width: 100%;
         min-height: 100dvh;
-        background-image: url('../../assets/images/background-gradient.png');
+        background-image: url('../../assets/images/gradient-480.svg');
         background-repeat: repeat-x;
         z-index: 0;
+    }
+
+    .gradient {
+        background-image: url('../../assets/images/gradient.svg');
     }
 
     .startContainer {
