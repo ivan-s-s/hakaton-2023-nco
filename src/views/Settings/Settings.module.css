@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -37,7 +36,7 @@
 .title {
   display: flex;
   font-size: 96px;
-  margin-top: 14px;
+  margin-top: 50px;
 }
 
 .stars {
@@ -81,7 +80,7 @@
   border-radius: 200px;
   color: #fff;
   margin-top: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
   width: 360px;
   min-height: 58px;
   display: flex;
@@ -96,21 +95,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 45px;
-}
-
-.lastBtn {
-  background-color: #FFC212;
-  color: #fff;
-  font-family: Comfortaa;
-  font-size: 24px;
-  width: 280px;
-  height: 44px;
-  border: none;
-  border-radius: 200px;
-  align-self: flex-end;
-  margin-right: 48px;
-  margin-bottom: 20px;
+  gap: 55px;
 }
 
 @media screen and (max-width: 1920px) {
@@ -144,12 +129,6 @@
 
   .buttonsPanel {
     gap: 44px;
-  }
-
-  .lastBtn {
-    align-self: center;
-    margin-right: 0;
-    margin-bottom: 0;
   }
 
   .starOne {
