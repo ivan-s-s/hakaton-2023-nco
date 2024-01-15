@@ -3,6 +3,11 @@ import classes from './Confirm.module.css';
 export const Confirm = (props) => {
   const { onRestartGame, onClickPlay } = props;
 
+  // const onNewGame = () => {
+  //   onRestartGame();
+  //   onClickPlay();
+  // };
+
   return (
     <div className={classes.modalContainer}>
       <fieldset className={classes.modal}>

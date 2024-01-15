@@ -71,6 +71,7 @@ export const Board = ({ moveChange, moveToFinish, level }) => {
     if (location === VIEWS.Game) {
       mixImages(level);
     }
+
   }, [location, level]);
 
   return (
