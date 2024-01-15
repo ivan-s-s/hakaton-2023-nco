@@ -75,18 +75,18 @@
 }
 
 .legend {
-  background-color: #f9b0c3;
-  border: 2px solid #2f2f61;
-  border-radius: 200px;
-  color: #fff;
-  margin-top: 20px;
-  margin-bottom: 120px;
+  display: flex;
   width: 360px;
   min-height: 58px;
-  display: flex;
+  background-color: #f9b0c3;
+  color: #fff;
+  border-radius: 200px;
+  border: 2px solid #2f2f61;
+  font-size: 30px; 
+  margin-top: 20px;
+  margin-bottom: 120px;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
 }
 
 .buttonsPanel {

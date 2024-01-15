@@ -3,10 +3,18 @@
     flex-direction: column;
     align-items: center;
     background-image: url(../../../src/assets/images/results.png);
+    background-size:contain;
     background-repeat: no-repeat;
+    max-height: 100dvh;
 }
 
-.titleCongrats {
+/* .settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+/* .titleCongrats {
     display: flex;
     width: 485px;
     height: 85px;
@@ -22,7 +30,7 @@
     align-items: center;
     border: 2px solid #2F2F61;
     margin-bottom: 0;
-}
+} */
 
 .titleWin {
     font-family: Comfortaa;
@@ -32,7 +40,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 100px;
+    margin-top: 86px;
 }
 
 .restartButton {
@@ -53,7 +61,7 @@
     box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
 }
 
-.title {
+/* .title {
     display: block;
     color: #FFF;
     text-align: center;
@@ -63,7 +71,7 @@
     font-weight: 800;
     line-height: normal;
     margin: 80px;
-}
+} */
 
 .cover {
     width: 1200px;
@@ -72,4 +80,8 @@
     border-radius: 24px;
     border: 2px solid #2F2F61;
     box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1280px) {
+
 }
