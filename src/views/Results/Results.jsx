@@ -15,7 +15,7 @@ export const Results = (props) => {
       <fieldset className={classes.cover}>
         <PageTitle>Поздравляем!</PageTitle>
         <p className={classes.titleWin}>Вы прошли игру</p>
-        <p className={classes.titleWin}>За {moves} ходов</p>
+        <p className={classes.titleWin}>за {moves} ходов</p>
       </fieldset>
       <button className={classes.restartButton} onClick={onRestartGame}>Начать сначала</button>
     </div>
