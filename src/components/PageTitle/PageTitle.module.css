@@ -1,0 +1,19 @@
+.pageTitle {
+  display: flex;
+  width: 485px;
+  height: 85px;
+  background-color: #F9B0C3;
+  color: white;
+  border-radius: 200px;
+  text-align: center;
+  font-family: Comfortaa;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #2F2F61;
+  margin-bottom: 0;
+}
+
+/* 36px - 30px - 21px - 17px - 16px */
