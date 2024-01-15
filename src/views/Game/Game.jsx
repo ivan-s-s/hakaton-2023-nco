@@ -57,7 +57,7 @@ export const Game = (props) => {
           <div className={classes.move}>Счёт: {moveToFinish} / {level}</div>
         </div>
         <div className={classes.div1} >
-          <Board moveChange={moveChangeToUp} moveToFinish={changeMoveToFinish} level={level}/>
+          <Board moveChange={moveChangeToUp} moveToFinish={changeMoveToFinish} level={level} />
         </div>
         <div className={classes.div2}>
           <button className={classes.pause} onClick={onPauseGame}></button>
