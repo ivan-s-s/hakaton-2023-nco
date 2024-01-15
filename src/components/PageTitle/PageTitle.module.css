@@ -17,3 +17,19 @@
 }
 
 /* 36px - 30px - 21px - 17px - 16px */
+
+@media screen and (max-width: 1280px) {
+  .pageTitle {
+    width: 291px;
+    height: 51px;
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .pageTitle {
+    width: 222px;
+    height: 40px;
+    font-size: 18px;
+  }
+}

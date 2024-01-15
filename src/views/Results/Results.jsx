@@ -11,7 +11,7 @@ export const Results = (props) => {
 
   return (
     <div className={classes.settings}>
-      <GameTitle style={{fontSize: "96px", margin: "48px"}}/>
+      <GameTitle style={{ margin: "48px"}}/>
       <fieldset className={classes.cover}>
         <PageTitle>Поздравляем!</PageTitle>
         <p className={classes.titleWin}>Вы прошли игру</p>
