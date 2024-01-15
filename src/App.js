@@ -23,7 +23,7 @@ function App() {
 
   const handleRestartGame = () => {
     setGameScore({ moves: 0, points: 0 });
-    goToNextPage(VIEWS.Home);
+    goToNextPage(VIEWS.Game);
   };
 
   const gameLevelToPlay = (value) => {
