@@ -20,7 +20,7 @@ import tulipImg from "./images/tulip.svg";
 import backImg from 'assets/images/question.svg';
 import gradientBackground from 'assets/images/gradient.svg';
 import star from 'assets/images/star.svg';
-import cloud from 'assets/images/cloud.svg';
+import cloud1 from 'assets/images/cloud1.svg';
 
 const IMAGES_EASY = [
   {
@@ -103,4 +103,4 @@ const IMAGES_HARD = [...IMAGES_MIDDLE,
   },
 ];
 
-export { IMAGES_EASY, IMAGES_MIDDLE, IMAGES_HARD, backImg, cloud, star, gradientBackground };
+export { IMAGES_EASY, IMAGES_MIDDLE, IMAGES_HARD, backImg, cloud1, star, gradientBackground };
