@@ -44,7 +44,7 @@ export const Game = (props) => {
         )}
       </div>
 
-      
+      <div className={classes.cloudDiv}></div>
       
       <div className={classes.gridLayout}> {/* z-index = 2 */}
         <div className={classes.emptyDiv1}></div>
