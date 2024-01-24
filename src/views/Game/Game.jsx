@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Board, CloudsContainer, Confirm, GameTitle } from 'components';
+import { Board, Confirm, GameTitle } from 'components';
 import { VIEWS } from 'utils/constants.js';
 import { AppContext } from 'utils/context';
 
@@ -42,9 +42,6 @@ export const Game = (props) => {
           <Confirm onRestartGame={onRestartGame} onClickPlay={closeModal} /> /* z-index = 100 */
         )}
       </div>
-
-      {/* <div className={classes.cloudDiv}></div> */}
-      <CloudsContainer />
       
       <div className={classes.gridLayout}> {/* z-index = 2 */}
         <div className={classes.emptyDiv1}></div>
