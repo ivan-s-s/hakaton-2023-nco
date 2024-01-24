@@ -75,23 +75,23 @@ export const Board = ({ moveChange, moveToFinish, level }) => {
   }, [location, level]);
 
   return (
+
     <div className={classes.board}>
-      <div className={classes.flexBlock}>
-        <div className={clsx(classes.boardGrid, {
-          [classes.boardGrid__middle]: +level === 12,
-          [classes.boardGrid__hard]: +level === 18,
-        })} id="boardGrid">
-          {cards.map((card) => (
-            <SingleCard
-              key={card.id}
-              card={card}
-              chooseCard={chooseCard}
-              isOpen={card === pickOne || card === pickTwo || card.status}
-              level={level}
-            />
-          ))}
-        </div>
+      <div className={clsx(classes.boardGrid, {
+        [classes.boardGrid__middle]: +level === 12,
+        [classes.boardGrid__hard]: +level === 18,
+      })} id="boardGrid">
+        {cards.map((card) => (
+          <SingleCard
+            key={card.id}
+            card={card}
+            chooseCard={chooseCard}
+            isOpen={card === pickOne || card === pickTwo || card.status}
+            level={level}
+          />
+        ))}
       </div>
     </div>
+
   );
 };

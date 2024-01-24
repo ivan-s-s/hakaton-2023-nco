@@ -16,5 +16,6 @@
   background-repeat: no-repeat;
   background-position: center; 
   background-position: cover;
+  overflow: hidden;
 }
 

@@ -23,7 +23,7 @@ export const Home = (props) => {
             alt="star"
             className={`${classes.star} ${classes.bigStar}`}
           />
-          <GameTitle/>
+          <GameTitle style={{fontSize: "86px"}}/>
         </div>
         <div className={classes.divButton}>
           <button className={classes.playBtn} onClick={onClickPlay}>

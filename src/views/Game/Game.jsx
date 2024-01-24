@@ -46,7 +46,7 @@ export const Game = (props) => {
       <div className={classes.gridLayout}> {/* z-index = 2 */}
         <div className={classes.emptyDiv1}></div>
         <div className={classes.roofTitle}>
-          <GameTitle style={{fontSize: "42px"}}/> {/* z-index = 2 */}
+          <GameTitle style={{fontSize: "48px"}} /> {/* z-index = 2 */}
         </div>
         <div className={classes.emptyDiv2}></div>
         <div className={classes.stats}>
