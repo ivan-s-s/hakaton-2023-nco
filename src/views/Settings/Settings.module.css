@@ -112,23 +112,13 @@
   .buttonsPanel {
     gap: 64px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .title {
-    font-size: 44px;
-  }
 
   .legend {
-    width: 320px;
+    width: 280px;
     min-height: 48px;
     font-size: 24px;
     margin-top: 40px;
     margin-bottom: 100px;
-  }
-
-  .buttonsPanel {
-    gap: 44px;
   }
 
   .starOne {
@@ -156,21 +146,55 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 44px;
+  }
+
+  .legend {
+    width: 280px;
+  }
+
+  .buttonsPanel {
+    gap: 44px;
+  }
+
+  
+}
+
 @media screen and (max-width: 375px) {
   .title {
     font-size: 38px;
   }
 
   .legend {
-    width: 300px;
+    width: 254px;
     min-height: 44px;
     font-size: 22px;
-    margin-top: 40px;
-    margin-bottom: 80px;
   }
 
   .buttonsPanel {
     gap: 38px;
+  }
+
+  .starOne {
+    top: 0px;
+    left: -32px;
+  }
+
+  .starTwo {
+    top: 16px;
+    left: -24px;
+  }
+
+  .starThree {
+    top: 18px;
+    left: 2px;
+  }
+    
+  .starFour {
+    top: 2px;
+    left: 18px;
   }
 }
 
@@ -180,10 +204,9 @@
   }
 
   .legend {
-    width: 280px;
+    width: 240px;
     min-height: 42px;
     font-size: 20px;
-    margin-top: 40px;
     margin-bottom: 70px;
   }
 
