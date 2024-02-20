@@ -3,13 +3,20 @@ import classes from './Confirm.module.css';
 export const Confirm = (props) => {
   const { onRestartGame, onClickPlay } = props;
 
-  // const onNewGame = () => {
-  //   onRestartGame();
-  //   onClickPlay();
-  // };
+  document.addEventListener('keydown', function(e) {
+    if(e.key === 'Escape'){
+      onClickPlay()
+    }
+  });
+
+  const clickOutOfModal = (e) => {
+    if (e.target.localName === 'div') {
+      onClickPlay()
+    }
+  };
 
   return (
-    <div className={classes.modalContainer}>
+    <div className={classes.modalContainer} onClick={clickOutOfModal}>
       <fieldset className={classes.modal}>
         <legend className={classes.legend}>Предупреждение</legend>
         <p className={classes.question}>Вы точно хотите начать заново?</p>

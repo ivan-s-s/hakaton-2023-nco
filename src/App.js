@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { Home, Game, Results, Pause, Settings } from './views';
+import { Home, Game, Results, Settings } from './views';
 import { VIEWS } from './utils/constants';
 import { AppContext } from 'utils/context';
 
@@ -15,7 +15,6 @@ function App() {
   const isSettingsOpen = location === VIEWS.Settings;
   const isGameOpen = location === VIEWS.Game;
   const isResultsOpen = location === VIEWS.Results;
-  const isPauseOpen = location === VIEWS.Pause;
 
   const goToNextPage = (viewToOpen) => {
     setLocation(viewToOpen);
@@ -45,10 +44,8 @@ function App() {
         {isGameOpen && (
           <Game
             onRestartGame={handleRestartGame}
-            onPauseGame={() => goToNextPage(VIEWS.Pause)}
           />
         )}
-        {isPauseOpen && <Pause onClickPlay={() => goToNextPage(VIEWS.Game)} />}
         {isResultsOpen && <Results onRestartGame={handleRestartGame} />}
       </AppContext.Provider>
     </div>
