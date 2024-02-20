@@ -1,13 +1,22 @@
-import classes from './Pause.module.css';
+import classes from './PauseModal.module.css';
 
-export const Pause = (props) => {
+export const PauseModal = (props) => {
   const { onClickPlay } = props;
 
+  document.addEventListener('keydown', function(e) {
+    if(e.key === 'Escape'){
+      onClickPlay()
+    }
+  });
+
+  const clickOutOfModal = (e) => {
+    if (e.target.localName === 'div') {
+      onClickPlay()
+    }
+  };
+
   return (
-    <div className={classes.home}>
-      <div className={classes.gradient}>
-        <div className={classes.modalContainer}>
-          <h1 className={classes.title}>Найди пару</h1>
+    <div className={classes.PauseContainer} onClick={clickOutOfModal}>
           <fieldset className={classes.modal}>
             <legend className={classes.legend}>ПАУЗА</legend>
             <p className={classes.question}>Вернуться к игре</p>
@@ -17,8 +26,6 @@ export const Pause = (props) => {
               </div>
             </button>
           </fieldset>
-        </div>
-      </div>
     </div>
   );
 };

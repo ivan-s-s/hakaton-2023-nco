@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
-import { Board, Confirm, GameTitle } from 'components';
+import { Board, Confirm, GameTitle, PauseModal } from 'components';
 import { VIEWS } from 'utils/constants.js';
 import { AppContext } from 'utils/context';
 
 import classes from './Game.module.css';
 
 export const Game = (props) => {
-  const { onRestartGame, onPauseGame } = props;
+  const { onRestartGame } = props;
   
   const { setLocation, setGameScore, level } = useContext(AppContext);
 
@@ -21,9 +21,10 @@ export const Game = (props) => {
     setMoveToFinish(moveToFinish + 1);
   };
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const openModal = () => setModalIsOpen(true);
-  const closeModal = () => setModalIsOpen(false);
+  const [modalIsOpen, setModalIsOpen] = useState(null);
+  const openModalPause = () => setModalIsOpen('pause');
+  const openModalConfirm = () => setModalIsOpen('confirm');
+  const closeModal = () => setModalIsOpen(null);
 
   useEffect(() => {
     if (moveToFinish === +level) {
@@ -38,8 +39,11 @@ export const Game = (props) => {
     <main className="App-header"> {/* z-index = 0 */}
 
       <div>
-        {modalIsOpen && (
-          <Confirm onRestartGame={onRestartGame} onClickPlay={closeModal} /> /* z-index = 100 */
+        {modalIsOpen === 'pause' && (
+          <PauseModal onClickPlay={closeModal} />
+        )}
+        {modalIsOpen === 'confirm' && (
+          <Confirm onRestartGame={onRestartGame} onClickPlay={closeModal} /> /* z-index = 100 */ 
         )}
       </div>
       
@@ -57,8 +61,8 @@ export const Game = (props) => {
           <Board moveChange={moveChangeToUp} moveToFinish={changeMoveToFinish} level={level} />
         </div>
         <div className={classes.div2}>
-          <button className={classes.pause} onClick={onPauseGame}></button>
-          <button className={classes.restart} onClick={openModal}></button>
+          <button className={classes.pause} onClick={openModalPause}></button>
+          <button className={classes.restart} onClick={openModalConfirm}></button>
         </div>
       </div>
     </main>
