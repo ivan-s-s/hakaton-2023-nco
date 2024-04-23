@@ -35,7 +35,7 @@ function App() {
   }, [location]);
 
   return (
-    <div className="App">
+    <div id="App" className="App">
       <AppContext.Provider
         value={{ location, setLocation, gameScore, setGameScore, level, setLevel }}
       >

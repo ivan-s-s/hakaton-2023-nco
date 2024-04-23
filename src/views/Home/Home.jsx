@@ -4,12 +4,17 @@ import { star } from 'assets/images';
 import { GameTitle } from 'components';
 
 export const Home = (props) => {
+  console.log(document.querySelector("ccc"));
   const { onClickPlay } = props;
 
   return (
     <div className={classes.home}>
-      <div className={classes.gradient2}></div>
-      <div className={classes.gradient}></div>
+      <div className={classes.gradient2}>
+        <div className={classes.gradientImgFar}></div>
+      </div>
+      <div className={classes.gradient}>
+        <div className={classes.gradientImg}></div>
+      </div>
       <img src={startImg} className={classes.startImg} alt="start" />
       <div className={classes.startContainer}>
         <div className={classes.startBox}>
