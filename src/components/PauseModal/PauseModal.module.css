@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap');
+
+.PauseContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal {
+  font-family: 'Comfortaa', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1200px;
+  height: 580px;
+  background-color: #e0dffe;
+  border: 2px solid #2f2f61;
+  border-radius: 20px;
+  box-shadow: 8px 8px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.modal button {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.playIcon {
+  width: 200px;
+  height: 200px;
+  background-color: #46467a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 14px 0px rgba(224, 223, 254, 0.4) inset,
+    8px 8px 8px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.play {
+  width: 0;
+  height: 0;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
+  border-left: 70px solid #ffc212;
+  margin-left: 17px;
+}
+
+.playBtn:hover .playIcon {
+  background-color: #2f2f61;
+}
+
+.playBtn:active .playIcon {
+  background-color: #22224e;
+}
+
+.modalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.legend {
+  color: #fff;
+  font-size: 36px;
+  background-color: #f9b0c3;
+  padding: 22px 175px;
+  border-radius: 200px;
+}
+
+.question {
+  color: #000;
+  font-size: 36px;
+  margin: 20px 0;
+
+}
+
+.title {
+  position: relative;
+  color: #fff;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0 0 40px 0;
+}

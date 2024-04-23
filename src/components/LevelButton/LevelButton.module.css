@@ -1,0 +1,40 @@
+
+.button {
+  background-color: #2F2F61;
+  color: #fff;
+  font-size: 30px;
+  font-family: Comfortaa;
+  width: 273px;
+  height: 66px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #46467A;
+}
+
+@media screen and (max-width: 1920px) {
+  .button {
+    font-size: 29px;
+    width: 262px;
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    font-size: 22px;
+    width: 200px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .button {
+    font-size: 20px;
+    width: 180px;
+    height: 44px;
+  }
+}
