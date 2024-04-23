@@ -16,16 +16,46 @@
     overflow: hidden;
 }
 
-.gradient {
+.gradient,
+.gradient2 {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100dvh;
-    background-image: url('../../assets/images/gradient-desktop.svg');
-    background-repeat: repeat-x;
+    left: -100%;
+    width: 200%;
+    height: 100dvh;
     z-index: -1;
+    overflow: hidden;
 }
+
+.gradient2 {
+    left: 0;
+}
+
+.gradientImg {
+    background-image: url('../../assets/images/gradientAnimationVersion.svg');
+    background-repeat: repeat-x;
+    width: 200dvw;
+    height: 100dvh;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100dvw);
+    }
+  }
+
+  @keyframes scroll2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100dvw);
+    }
+  }
 
 .startImg {
     position: absolute;
@@ -35,7 +65,26 @@
     object-fit: fill;
     overflow: hidden;
     z-index: 0;
+    animation: 30s linear 0s infinite spin;
 }
+
+/* @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} */
 
 .startContainer {
     display: flex;
@@ -165,7 +214,7 @@
         justify-content: start;
     }
 
-    .gradient {
+    .gradientImg {
         background-image: url('../../assets/images/gradient-1024.svg');
     }
 
@@ -196,24 +245,18 @@
     }
 }
 
-@media screen and (max-width: 834px) {
-    .gradient {
-
-    }
-        
-
+@media screen and (max-width: 834px) {     
     .startContainer {
         margin-left: 0;
         margin-top: 50px;
         gap: 440px;
     }
-    
+
     .startImg {
         width: 120%;
         left: -40px;
         top: 12%;
     }
-    
 
     .playIcon {
         width: 118px;
@@ -241,18 +284,16 @@
 }
 
 @media screen and (max-width: 480px) {
-    .gradient2 {
+    .gradientImgFar {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        min-height: 100dvh;
         background-image: url('../../assets/images/gradient-480.svg');
         background-repeat: repeat-x;
-        z-index: 0;
+        width: 200dvw;
+        height: 100dvh;
+        animation: scroll2 40s linear infinite;
     }
 
-    .gradient {
+    .gradientImg {
         background-image: url('../../assets/images/gradient.svg');
     }
 

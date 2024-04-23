@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Board, Confirm, GameTitle, PauseModal } from 'components';
+import { Board, BoardBackground, Confirm, GameTitle, PauseModal } from 'components';
 import { VIEWS } from 'utils/constants.js';
 import { AppContext } from 'utils/context';
 
@@ -37,7 +37,7 @@ export const Game = (props) => {
 
   return (
     <main className="App-header"> {/* z-index = 0 */}
-
+    <BoardBackground />
       <div>
         {modalIsOpen === 'pause' && (
           <PauseModal onClickPlay={closeModal} />

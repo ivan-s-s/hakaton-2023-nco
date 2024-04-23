@@ -77,6 +77,19 @@
   z-index: 1;
 }
 
+@keyframes animateCloudOpacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .emptyDiv1::after {
   content: '';
   position: absolute;
@@ -86,6 +99,7 @@
   width: 396px;
   height: 161px;
   z-index: 1;
+  animation: animateCloudOpacity 50s linear infinite;
 }
 
 .emptyDiv2 {
@@ -101,6 +115,7 @@
   width: 255px;
   height: 110px;
   z-index: 1;
+  animation: animateCloudOpacity 90s linear infinite;
 }
 
 .emptyDiv2::after {
@@ -112,6 +127,7 @@
   width: 396px;
   height: 161px;
   z-index: 1;
+  animation: animateCloudOpacity 70s linear infinite;
 }
 
 .stats {
@@ -182,6 +198,7 @@
   width: 396px;
   height: 161px;
   z-index: 1;
+  animation: animateCloudOpacity 70s linear infinite;
 }
 
 @media screen and (max-width: 1024px) {
