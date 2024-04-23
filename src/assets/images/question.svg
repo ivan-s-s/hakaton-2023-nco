@@ -1,0 +1,24 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="question">
+<g id="question_2" filter="url(#filter0_i_13_809)">
+<g id="evaQuestionMarkFill1">
+<g id="evaQuestionMarkFill2">
+<path id="Vector" d="M106.25 56.25C106.25 47.962 102.958 40.0134 97.0971 34.1529C91.2366 28.2924 83.288 25 75 25C66.712 25 58.7634 28.2924 52.9029 34.1529C47.0424 40.0134 43.75 47.962 43.75 56.25C43.75 57.9076 44.4085 59.4973 45.5806 60.6694C46.7527 61.8415 48.3424 62.5 50 62.5C51.6576 62.5 53.2473 61.8415 54.4194 60.6694C55.5915 59.4973 56.25 57.9076 56.25 56.25C56.25 52.5416 57.3497 48.9165 59.4099 45.8331C61.4702 42.7496 64.3986 40.3464 67.8247 38.9273C71.2508 37.5081 75.0208 37.1368 78.6579 37.8603C82.2951 38.5837 85.636 40.3695 88.2583 42.9917C90.8805 45.614 92.6663 48.9549 93.3897 52.5921C94.1132 56.2292 93.7419 59.9992 92.3227 63.4253C90.9036 66.8514 88.5004 69.7798 85.4169 71.8401C82.3335 73.9003 78.7084 75 75 75C73.3424 75 71.7527 75.6585 70.5806 76.8306C69.4085 78.0027 68.75 79.5924 68.75 81.25V93.75C68.75 95.4076 69.4085 96.9973 70.5806 98.1694C71.7527 99.3415 73.3424 100 75 100C76.6576 100 78.2473 99.3415 79.4194 98.1694C80.5915 96.9973 81.25 95.4076 81.25 93.75V86.875C88.3085 85.4342 94.6525 81.5989 99.2082 76.0181C103.764 70.4374 106.251 63.4541 106.25 56.25Z" fill="#FFC212"/>
+<path id="Vector_2" d="M75 125C78.4518 125 81.25 122.202 81.25 118.75C81.25 115.298 78.4518 112.5 75 112.5C71.5482 112.5 68.75 115.298 68.75 118.75C68.75 122.202 71.5482 125 75 125Z" fill="#FFC212"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_i_13_809" x="43.75" y="25" width="66.5" height="103" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="3"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_13_809"/>
+</filter>
+</defs>
+</svg>

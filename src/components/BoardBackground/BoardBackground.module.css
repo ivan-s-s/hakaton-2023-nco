@@ -1,0 +1,111 @@
+.bcCloud01 {
+  position: absolute;
+  top: 10%;
+  scale: 1;
+  pointer-events: none;
+  animation: animateCloud1 40s linear infinite;
+}
+.bcCloud02 {
+  position: absolute;
+  scale: 0.6;
+  top: 51%;
+  pointer-events: none;
+  animation: animateCloud2 40s linear infinite;
+}
+.bcCloud03 {
+  position: absolute;
+  top: 56%;
+  scale: 1.2;
+  pointer-events: none;
+  animation: animateCloud2 40s linear infinite;
+}
+.bcCloud04 {
+  position: absolute;
+  top: 74%;
+  scale: 0.7;
+  pointer-events: none;
+  animation: animateCloud3 80s linear infinite;
+}
+.bcCloud05 {
+  position: absolute;
+  top: 80%;
+  scale: 1.3;
+  pointer-events: none;
+  animation: animateCloud3 80s linear infinite;
+}
+.bcCloud06 {
+  position: absolute;
+  top: 40%;
+  scale: 0.7;
+  pointer-events: none;
+  animation: animateCloud4 20s linear infinite;
+}
+
+@keyframes animateCloud1 {
+  0% {
+    transform: translateX(calc(-100% - 50vw));
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(calc(100% + 50vw));
+    opacity: 1;
+  }
+}
+
+@keyframes animateCloud2 {
+  0% {
+    transform: translateX(calc(-100% - 80vw));
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100% + 80vw));
+  }
+}
+
+@keyframes animateCloud3 {
+  0% {
+    transform: translateX(calc(-100% - 100vw));
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(calc(-100% - 100vw));
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100% + 100vw));
+  }
+}
+
+@keyframes animateCloud4 {
+  0% {
+    transform: translateX(calc(-100% - 100vw));
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(calc(100% + 100vw));
+    opacity: 0.1;
+  }
+}
